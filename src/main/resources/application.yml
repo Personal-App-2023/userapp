@@ -1,0 +1,16 @@
+server:
+  port: 9096
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: THOUGHTS-USER-SERVICE
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/thoughtsdb
+      host: localhost
+      port: 27017
+      database: thoughtsdb
+      repositories:
+        enabled: true
