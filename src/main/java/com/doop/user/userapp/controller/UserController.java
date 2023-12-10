@@ -17,4 +17,10 @@ public class UserController {
     public int findOrCreateUser(@RequestBody User user){
         return service.findOrCreateUser(user);
     }
+
+    @PostMapping("/auth")
+    public User authenticate(@RequestBody String token)
+    {
+        return service.authAndGetUser(token);
+    }
 }
