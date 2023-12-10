@@ -28,7 +28,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: git-bash
-      uses: pkg-src/github-action-git-bash@v1.1
       run: ls -R
           
 
