@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/userapp")
 public class UserController {
-
+ 
     @Autowired
     UserService service;
 
