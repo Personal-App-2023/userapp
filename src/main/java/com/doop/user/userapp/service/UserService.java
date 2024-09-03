@@ -1,9 +1,17 @@
 package com.doop.user.userapp.service;
 
+import com.doop.user.userapp.dto.AuthUser;
 import com.doop.user.userapp.entity.User;
 import com.doop.user.userapp.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 import java.util.List;
 
