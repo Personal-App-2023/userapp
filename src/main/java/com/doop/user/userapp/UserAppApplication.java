@@ -2,6 +2,8 @@ package com.doop.user.userapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class UserAppApplication {
@@ -10,4 +12,7 @@ public class UserAppApplication {
 		SpringApplication.run(UserAppApplication.class, args);
 	}
 
+	@Bean
+	//@LoadBalanced
+	public RestTemplate getRestTemplate() {return new RestTemplate();}
 }
