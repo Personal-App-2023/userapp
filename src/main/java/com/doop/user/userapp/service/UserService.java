@@ -21,6 +21,8 @@ public class UserService {
     UserRepo repo;
     @Autowired
     UserSequenceGenerator generator;
+    @Autowired
+    RestTemplate restTemplate;
 
     public int findOrCreateUser(User user)
     {
@@ -67,5 +69,13 @@ public class UserService {
         /*return restTemplate.exchange
                 (uri, HttpMethod.GET, new HttpEntity<T>(createGAPIHeaders(token)), AuthUser.class);
                 */
+    }
+
+    private HttpHeaders createGAPIHeaders(String token){
+        return new HttpHeaders() {{
+            String authHeader = "Bearer " + token;
+            set( "Authorization", authHeader );
+            set("Content-Type","application/json");
+        }};
     }
 }
